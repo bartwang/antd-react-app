@@ -1,0 +1,41 @@
+/* ------------------------------------------------- */
+// Stylesheet for Progress bar
+/* ------------------------------------------------- */
+
+// Normal style
+.ant-progress {
+  &-bg {
+    background-color: $pink;
+    border-radius: 0;
+  }
+  &-inner {
+    border-radius: 0;
+  }
+}
+
+.ant-progress-status-active .ant-progress-bg:before {
+  border-radius: 0;
+}
+
+// Circle style
+.ant-progress-circle .ant-progress-text {
+  font-family: inherit;
+}
+
+.ant-progress-circle-path {
+  stroke: $pink;
+}
+
+// icon font update
+.anticon-check {
+  &:before {
+    font-family: 'fontello' !important;
+    content: '\E828';
+  }
+  &-circle {
+    &:before {
+      font-family: 'fontello' !important;
+      content: '\E817';
+    }
+  }
+}

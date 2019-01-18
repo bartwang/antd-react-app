@@ -1,0 +1,30 @@
+/* ------------------------------------------------- */
+// Stylesheet for Card
+/* ------------------------------------------------- */
+
+.ant-card.action-card {
+  & {
+    background: transparent;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+  }
+  .ant-card-head {
+    background: transparent;
+    border-bottom: none;
+    margin-bottom: 15px;
+    padding: inherit;
+    @include responsive-to('mobile') {
+      margin-bottom: 0;
+    }
+  }
+  .ant-card-head-title {
+    @extend h5;
+    margin: auto;
+  }
+  .ant-card-body {
+    background: $white;
+    padding: 20px;
+  }
+  .ant-card-loading-content {
+    padding: 0;
+  }
+}

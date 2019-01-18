@@ -1,0 +1,53 @@
+.icon-card {
+  & {
+    text-align: center;
+  }
+  .badge,
+  .status-badge {
+    margin: 0 auto;
+  }
+  h6 {
+    margin-top: 20px;
+    @include responsive-to('mobile') {
+      margin-top: 10px;
+    }
+  }
+}
+
+.vertical-icon-card {
+  & {
+    display: table;
+    width: 100%;
+    text-align: center;
+    @include responsive-to('mobile') {
+      margin-bottom: 20px;
+    }
+  }
+  &__content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__wrapper{
+    margin-top: 20px;
+    @include responsive-to('mobile') {
+      float: left;
+      display: table;
+      margin-top: inherit;
+      margin-left: 15px;
+      width: calc(100% - 74px);
+      height: 54px;
+    }
+  }
+  &__detail {
+    @include responsive-to('mobile') {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: left;
+    }
+  }
+  .badge{
+    @include responsive-to('mobile') {
+      float: left;
+    }
+  }
+}

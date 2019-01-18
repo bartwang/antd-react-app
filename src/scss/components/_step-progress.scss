@@ -1,0 +1,102 @@
+/* ------------------------------------------------- */
+// Stylesheet for Step progress
+/* ------------------------------------------------- */
+
+.ant-steps {
+  &-tail {
+    margin: 0 0 0 60px;
+  }
+
+  &-step {
+    text-align: center;
+    width: 120px;
+  }
+
+  .ant-steps-main {
+    display: block;
+  }
+
+  .ant-steps-head {
+    background: transparent;
+  }
+
+  .ant-steps-head-inner {
+    & {
+      @extend .font--weight-light;
+      font-size: 14px;
+    }
+    & > .ant-steps-icon.anticon {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .ant-steps-title {
+    @extend .font--weight-light;
+    @extend p;
+    background: transparent;
+  }
+
+  .ant-steps-description {
+    @extend p.small;
+  }
+
+  .ant-steps-item {
+    &.ant-steps-status-process {
+      .ant-steps-description,
+      .ant-steps-title {
+        color: $black;
+      }
+    }
+
+    &.ant-steps-status-finish .ant-steps-description,
+    &.ant-steps-status-wait .ant-steps-description,
+    &.ant-steps-status-finish .ant-steps-title,
+    &.ant-steps-status-wait .ant-steps-title {
+      color: $grey;
+    }
+
+    &.ant-steps-status-process .ant-steps-head-inner {
+      border-color: $pink;
+      background-color: $pink;
+    }
+
+    &.ant-steps-status-process .ant-steps-head-inner > .ant-steps-icon {
+      line-height: 24px;
+    }
+
+    &.ant-steps-status-wait .ant-steps-head-inner > .ant-steps-icon {
+      color: $grey;
+      line-height: 24px;
+    }
+
+    &.ant-steps-status-finish {
+      .ant-steps-head-inner {
+        border-color: $pink;
+        background-color: $white;
+        > .ant-steps-icon {
+          color: $pink;
+        }
+      }
+      .ant-steps-tail > i:after {
+        background: $pink;
+        box-shadow: 0 0 0 0 $pink;
+      }
+    }
+
+    &.ant-steps-status-error .ant-steps-head-inner > .ant-steps-icon.anticon-cross:before {
+      font-family: 'fontello' !important;
+      content: "\E812";
+      font-size: 12px;
+    }
+  }
+
+  &.ant-steps-vertical {
+    .ant-steps-step {
+      text-align: left;
+    }
+    .ant-steps-tail {
+      margin: 0;
+    }
+  }
+}

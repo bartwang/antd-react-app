@@ -1,0 +1,95 @@
+/* ------------------------------------------------- */
+// Override popover style
+/* ------------------------------------------------- */
+
+.ant-popover {
+  & {
+    width: 510px;
+    @include responsive-to('mobile') {
+      width: 80%;
+    }
+  }
+
+  &-inner-content {
+    padding: 20px;
+    color: $black;
+    p {
+      font-size: 14px;
+      line-height: 23px;
+    }
+  }
+
+  &.dropdown-menu {
+    & {
+      width: 160px;
+    }
+    ul {
+      & {
+        margin: 0;
+      }
+      &:last-child {
+        li {
+          padding: 0 20px 20px;
+          @include responsive-to('mobile') {
+            padding: 0 20px 10px 20px;
+          }
+        }
+      }
+      li {
+        line-height: 1;
+        padding: 20px 20px 0 20px;
+        @include responsive-to('mobile') {
+          padding: 10px 20px 0 20px;
+        }
+        a {
+          color: $black;
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+    hr {
+      @include responsive-to('mobile') {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    .ant-popover-inner-content {
+      padding: 0;
+    }
+  }
+
+}
+
+.ant-popover-arrow {
+  border-width: 8px;
+  &:after {
+    border-width: 8px;
+  }
+}
+
+.ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
+  right: 15px;
+}
+
+.ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
+  //border-bottom-color: $mid-grey;
+  top: 0;
+  &:after {
+    margin-left: -8px;
+    border-bottom-color: $white;
+  }
+}
+
+.ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-topLeft > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow {
+  border-top-color: $mid-grey;
+  bottom: 0;
+  &:after {
+    margin-left: -8px;
+  }
+}

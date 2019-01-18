@@ -1,0 +1,76 @@
+/* ------------------------------------------------- */
+// Stylesheet for datepick
+/* ------------------------------------------------- */
+.ant-calendar {
+  font-size: 12px;
+  width: 260px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+}
+
+.ant-calendar-range {
+  & {
+    width: 520px;
+    @include responsive-to('mobile') {
+      width: 260px;
+    }
+  }
+  &-part {
+    @include responsive-to('mobile') {
+      width: 100%;
+    }
+  }
+  &-middle {
+    margin-left: -146px;
+  }
+  &-right .ant-calendar-date-input-wrap {
+    @include responsive-to('mobile') {
+      margin-left: inherit;
+    }
+  }
+  &-picker-separator {
+    line-height: 28px;
+  }
+}
+
+.ant-calendar-input-wrap {
+  background: $light-grey;
+}
+
+.ant-calendar-date-input-wrap {
+  .ant-calendar-input {
+    background: $light-grey;
+    height: 22px;
+    padding: 0 10px;
+    color: $black;
+    font-size: 14px;
+  }
+}
+
+.ant-calendar-picker {
+  width: 100%;
+  &-icon {
+    right: 10px;
+    &:after {
+      font-size: 15px;
+    }
+  }
+  &-clear {
+    right: 10px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.ant-calendar-date {
+  color: $black;
+  border-radius: 50%;
+}
+
+.ant-calendar-month-panel-month{
+  border-radius: 0;
+}
+
+
+
+

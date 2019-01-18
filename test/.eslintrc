@@ -1,0 +1,18 @@
+{
+  "env": {
+    "mocha": true,
+    "node": true
+  },
+  "globals": {
+    "enzyme": true,
+    "expect": true,
+    "React": true,
+    "fetchMock": true,
+    "spy": true,
+    "should": true,
+    "sinon": true
+  },
+  "rules": {
+    "no-unused-expressions": 0
+  }
+}
